@@ -13,4 +13,3 @@ npm intall
 npm start
 ```
 The application will start on `localhost:4200`
-
