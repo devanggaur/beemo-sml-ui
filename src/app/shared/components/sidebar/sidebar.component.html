@@ -1,0 +1,45 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h4>Kumar Shubham</h4>
+<!--      <h6>kumarshubham@gmail.com</h6>-->
+    </div>
+    <img alt="Kumar Shubham">
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader style="font-size: 175%;">Pages</h2>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/" style="font-size: 125%;">Social Media Listener</a>
+  <mat-tree>
+    <mat-tree-node>
+      <button mat-icon-button disabled></button>Social Media Listener
+<!--      <a mat-list-item routerLinkActive="list-item-active" routerLink="/user-map">User Map</a>-->
+
+    </mat-tree-node>
+    <mat-nested-tree-node>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/user-map">User Map</a>
+    </mat-nested-tree-node>
+  </mat-tree>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/user-map">User Map</a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts" >Posts</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/sentiments">Sentiments</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/sentiments">Frequent words</a>
+
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Tools</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon>import_contacts</mat-icon>
+    Contacts
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon>contact_phone</mat-icon>
+    Leads
+  </a>
+
+</mat-nav-list>

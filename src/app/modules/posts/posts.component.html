@@ -1,0 +1,87 @@
+<app-modals></app-modals>
+<div class="navbar navbar-fixed-top">
+<div class="card">
+  <div class="card-header" style="font-size: 175%;">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active">Twitter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Facebook</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link ">Instagram</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4 col-xs-10" *ngFor="let tweet of tweets">
+
+      <div style="padding: 3%">
+        <div class="card " style="height: 325px;min-width: 300px">
+          <div class="card-header">
+            <div class="top-right" style="float:right;margin:0 0 0 auto;">
+              <span *ngIf="true" class="badge badge-pill badge-success">Positive</span>
+            </div>
+            <h5 class="card-title text-primary">{{tweet.screen_name}}</h5>
+            <p class="card-subtitle tex-muted">{{tweet.city}}</p>
+          </div>
+          <div class="card-body" style="overflow-y: auto;display: flex">
+            <p class="card-text">{{tweet.messsage}}</p>
+            <!--    <a data-target="#exampleModal" class="btn btn-primary">Reply</a>-->
+
+
+
+          </div>
+          <div class="card-footer row">
+            <div style="padding-right: 2%">
+              <button type="button" class="btn btn-primary" style="width: 100px" data-toggle="modal"
+                      data-target="#exampleModal">
+                Reply
+              </button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary" style="width: 100px"
+                      data-target="#exampleModal">
+                Like
+              </button>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="modal " tabindex="110" id="exampleModal" role="dialog" data-backdrop="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea #todo name="todo" class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+        <button type="button" class="btn btn-primary" (click)="onRetweet(tweets.tweet_id_str )">Send message</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>

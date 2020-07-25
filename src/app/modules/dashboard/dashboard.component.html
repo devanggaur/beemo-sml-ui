@@ -1,0 +1,50 @@
+<div>
+<!--    <app-widget-area [data]="bigChart"></app-widget-area>-->
+  <mat-list role="list">
+    <div mat-subheader>Tweets</div>
+    <mat-list-item role="listitem"><mat-icon mat-list-icon>message</mat-icon>Tweet from twitter user 1
+      <button mat-raised-button color="primary">Reply</button></mat-list-item>
+    <mat-list-item role="listitem"><mat-icon mat-list-icon>message</mat-icon>Tweet from twitter user 2</mat-list-item>
+    <mat-list-item role="listitem"><mat-icon mat-list-icon>message</mat-icon>Tweet from twitter user 3</mat-list-item>
+  </mat-list>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="25">
+        <app-widget-card label="New Users" total="12k" percentage="50" [data]="cards"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Users retention" total="10k" percentage="40" [data]="cards"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Users engagement" total="8k" percentage="30" [data]="cards"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Referral" total="6k" percentage="20" [data]="cards"></app-widget-card>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+
+
+
+    <div fxFlex="40">
+        <app-widget-pie [data]="pieChart"></app-widget-pie>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
